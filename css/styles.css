@@ -22,6 +22,12 @@ a {
   justify-content: center;
 }
 
+.wrapper {
+  padding: 10px;
+  width: auto;
+  margin: 0 60ox 0 60px;
+}
+
 img {
   height: 100%;
   width: 100%;
@@ -90,8 +96,7 @@ p {
 
 #header .header {
   min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0.24);
-  transition: .3 ease background-color;
+  background-color: #29323c;
 }
 
 #header .nav-bar {
@@ -134,19 +139,6 @@ p {
   text-transform: uppercase;
   padding: 20px;
   display: block;
-}
-
-#header .nav-list ul a::after {
-  content: attr(data-after);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%) scale(0);
-  color: rgba(240, 248, 255, 0.21);
-  font-size: 13rem;
-  letter-spacing: 50px;
-  z-index: -1;
-  transition: .3s ease letter-spacing;
 }
 
 #header .nav-list li:hover a {
@@ -345,20 +337,20 @@ p {
   font-size: 2rem;
 }
 
-#services .services {
+#aboutme .aboutme {
   flex-direction: column;
-  text-align: center;
+  text-align: justify;
   max-width: 150%;
   margin: 0 auto;
   padding: 100px 0;
 }
 
-#services .service-top {
+#aboutme .aboutme-top {
   max-width: 500px;
   margin: 0 auto;
 }
 
-#services .service-bottom {
+#aboutme .aboutme-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,13 +358,13 @@ p {
   margin-top: 50px;
 }
 
-#services .service-bottom .icon {
+#aboutme .aboutme-bottom .icon {
   height: 80px;
   width: 80px;
   margin-bottom: 20px;
 }
 
-#services .service-item-webdesign {
+#aboutme .aboutme-item-webdesign {
   flex-basis: 80%;
   display: flex;
   align-items: flex-start;
@@ -388,7 +380,7 @@ p {
   background-image: url(../imgs/box-outline-patterns.png);
 }
 
-#services .service-item-webdesign::after {
+#aboutme .aboutme-item-webdesign::after {
   content: '';
   position: absolute;
   left: 0;
@@ -400,18 +392,18 @@ p {
   z-index: -1;
 }
 
-#services .service-item-webdesign h2 {
+#aboutme .aboutme-item-webdesign h2 {
   font-size: 2rem;
   color: crimson;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 
-#services .service-item-webdesign p {
+#aboutme .aboutme-item-webdesign p {
   text-align: left;
 }
 
-#services .service-item-illustrations {
+#aboutme .aboutme-item-illustrations {
   flex-basis: 80%;
   display: flex;
   align-items: flex-start;
@@ -427,7 +419,7 @@ p {
   background-image: url(../imgs/astrowizard-color.jpg);
 }
 
-#services .service-item-illustrations::after {
+#aboutme .aboutme-item-illustrations::after {
   content: '';
   position: absolute;
   left: 0;
@@ -439,20 +431,20 @@ p {
   z-index: -1;
 }
 
-#services .service-item-illustrations h2 {
+#aboutme .aboutme-item-illustrations h2 {
   font-size: 2rem;
   color: crimson;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 
-#services .service-item-illustrations p {
+#aboutme .aboutme-item-illustrations p {
   text-align: left;
 }
 
 #portfolio .portfolio {
   flex-direction: column;
-  text-align: center;
+  text-align: justify;
   max-width: 150%;
   margin: 0 auto;
   padding: 100px 0;
@@ -474,6 +466,7 @@ p {
 #portfolio .portfolio-filter {
   display: flex;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 #portfolio .portfolio-filter li {
@@ -536,17 +529,6 @@ p {
   font-size: 1.3rem;
 }
 
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
 @keyframes hamburger_pulse {
   0% {
     opacity: 1;
@@ -590,28 +572,6 @@ p {
   #hero h1 {
     font-size: 7rem;
   }
-  #about .about {
-    flex-direction: row;
-  }
-  #about .col-left {
-    width: 600px;
-    height: 400px;
-    padding-left: 60px;
-  }
-  #about .col-left .about-img::after {
-    left: -45px;
-    top: 34px;
-    height: 98%;
-    width: 98%;
-    border: 10px solid crimson;
-  }
-  #about .col-right {
-    text-align: left;
-    padding: 30px;
-  }
-  #about .col-right h1 {
-    text-align: left;
-  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -634,7 +594,7 @@ p {
   #header .nav-list ul li a {
     font-size: 1.8rem;
   }
-  #services .service-bottom .service-item-webdesign, #services .service-bottom .service-item-illustrations {
+  #aboutme .aboutme-bottom .aboutme-item-webdesign, #aboutme .aboutme-bottom .aboutme-item-illustrations {
     flex-basis: 22%;
     margin: 1.5%;
   }
