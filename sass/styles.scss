@@ -9,6 +9,9 @@ html{
     font-family: $defaultfont;
     scroll-behavior: smooth;
 }
+// body{
+//     height: 95vh;
+// }
 a{
     text-decoration: none;
 }
@@ -23,6 +26,25 @@ img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    span{
+        color: crimson;
+    }
 }
 // call to action buttons
 .cta{
@@ -40,6 +62,16 @@ img{
     &:hover{
         color: white;
         background-color: crimson;
+    }
+}
+.brand{
+    h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    span{
+        color: crimson;
     }
 }
 //header
@@ -65,28 +97,28 @@ img{
         padding: 0 10px;
     }
     .nav-list{
-        .modal-button{
-            border: none;
-            background: none;
-            cursor: pointer;
-            margin: 0;
-            padding: 0;
-            font-family: $defaultfont;
-            font-size: 1.75rem; //looks bigger when compare to normal a font???
-            font-weight: 500;
-            letter-spacing: .2rem;
-            color: white;
-            text-transform: uppercase;
-            padding: 20px;
-            display: block;
-            &:hover{
-                color: crimson;
-                &::after{
-                    transform: translate(-50%, -50%) scale(1);
-                    letter-spacing: initial;
-                }
-            }
-        }
+        // .modal-button{
+        //     border: none;
+        //     background: none;
+        //     cursor: pointer;
+        //     margin: 0;
+        //     padding: 0;
+        //     font-family: $defaultfont;
+        //     font-size: 1.75rem; //looks bigger when compare to normal a font???
+        //     font-weight: 500;
+        //     letter-spacing: .2rem;
+        //     color: white;
+        //     text-transform: uppercase;
+        //     padding: 20px;
+        //     display: block;
+        //     &:hover{
+        //         color: crimson;
+        //         &::after{
+        //             transform: translate(-50%, -50%) scale(1);
+        //             letter-spacing: initial;
+        //         }
+        //     }
+        // }
         ul{
             list-style: none;
             position: absolute;
@@ -102,7 +134,7 @@ img{
             z-index: 1;
             overflow-x: hidden;
             transition: .5 ease left;
-            .active{
+            &.active{
                 left: 0;
             }
             a{
@@ -220,6 +252,43 @@ img{
         padding: 0 50px;
         justify-content: flex-start;
     }
+    // .type-text{
+    //     display: inline-flex;
+    //     .static-text{
+    //         color: #fff;
+    //         font-size: 4rem;
+    //         font-weight: 400;
+    //     }
+    //     .dynamic-text{
+    //         margin-left: 15px;
+    //         height: 90px;
+    //         line-height: 90px;
+    //         overflow: hidden;
+    //         li{
+    //             color: crimson;//
+    //             list-style: none;
+    //             font-size: 4rem;
+    //             font-weight: 500;
+    //             position: relative;
+    //             top: 0;
+    //             animation: slide 5s steps(3) infinite;
+    //             span{
+    //                 position: relative;
+    //                 &::after{
+    //                     content: '';
+    //                     position: absolute;
+    //                     left: 0;
+    //                     height: 100%;
+    //                     width: 100%;
+    //                     color: transparent;
+    //                     background: transparent;//video made it into background color, figure how to make transparent?
+    //                     border-left: 2px solid crimson;
+    //                     animation: text-typing 2s steps(13) infinite;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     h1{
         display: block;
         width: fit-content;
@@ -260,57 +329,201 @@ img{
     }
 }
 // end hero
-
-// end call to action buttons
-// modals
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top:0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-// modal-content
-.modal-content{
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-}
-.modal-header{
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-.modal-body{
-    padding: 2px 16px;
-}
-// modal close button
-.close{
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    &:hover,&:focus{
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
+//aboutme
+// #aboutme{
+//         flex-direction: column;
+//         text-align: center;
+//         max-width: 150%;
+//         margin: 0 auto;
+//         padding: 100px 0;
+//         border: 1px solid #000;//test
+//     .aboutme-top{
+//         max-width: 500px;
+//         margin: 0 auto;
+//     }
+// }
+//end aboutme
+//start about
+#about{
+    .about{
+        flex-direction: column-reverse;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 20px;
+    }
+    .col-left{
+        // col-left - original
+        width: 250px;
+        height: 360px;
+        .about-img{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            border: 10px solid white;
+        }
+        .about-img::after{
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 19px;
+            height: 98%;
+            width: 98%;
+            border: 7px solid crimson;
+            z-index: -1;
+        }
+    }
+    .col-right{
+        // col-right - orginial
+        width: 100%;
+        h2{
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: .2rem;
+            margin-bottom: 10px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        .cta{
+            color: black;
+            margin-bottom: 50px;
+            padding: 10px 20px;
+            font-size: 2rem;
+        }
     }
 }
-// start 
+// end about
+// services section
+#services{
+    .services{
+        flex-direction: column;
+        text-align: center;
+        max-width: 150%;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    .service-top{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .service-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        .icon{
+            height: 80px;
+            width: 80px;
+            margin-bottom: 20px;
+        }
+    }
+    @mixin service-item{
+        flex-basis: 80%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 30px;
+        border-radius: 10px ;
+        // background-image: url(../imgs/box-outline-patterns.png);
+        background-size: cover;
+        margin: 10px 5%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::after{
+            // dark overlay
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            opacity: .7;
+            z-index: -1;
+        }
+        h2{
+            font-size: 2rem;
+            color: crimson;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        p{
+            text-align: left;
+        }
+    }
+    .service-item-webdesign{
+        @include service-item;
+        background-image: url(../imgs/box-outline-patterns.png);
+    }
+    .service-item-illustrations{
+        @include service-item;
+        background-image: url(../imgs/astrowizard-color.jpg);
+    }
+}
+// end of service section
+//start product page
+#portfolio{
+    .portfolio{
+        flex-direction: column;
+        text-align: center;
+        max-width: 150%;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    .portfolio-top{
+        // padding-top: 100px;//needed to keep nav off section
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .product-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .portfolio-filter{
+        display: flex;
+        margin-bottom: 10px;
+        li{
+            list-style: none;
+            background: #eee;
+            padding: 8px 20px;
+            margin: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            &.active{
+                background: #03a9f4;
+                color:#fff;
+            }
+        }
+    }
+    .portfolio-items{
+        display: flex;
+        flex-wrap: wrap;
+        // padding-bottom: 20px;
+        .itemBox{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 5px;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+//end product
+// start footer
 #footer{
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     .footer{
@@ -388,6 +601,20 @@ img{
         font-weight: 500;
     }
 }
+// typing animation
+// @keyframes text-typing {
+//     100%{
+//         left: 100%;
+//         margin: 0 -35px 0 35px;
+//     } 
+// }
+// @keyframes slide {
+//     100%{
+//         top: -360px;
+
+//     }
+    
+// }
 // media screens tablet
 @media only screen and (min-width: 600px) {
     .cta {
@@ -399,6 +626,32 @@ img{
             font-size: 7rem;
         }
     }
+     // about
+ #about{
+    .about{
+        flex-direction: row;
+    }
+    .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+        .about-img::after{
+            left: -45px;
+            top: 34px;
+            height: 98%;
+            width: 98%;
+            border: 10px solid crimson;
+        }
+    }
+    .col-right{
+        text-align: left;
+        padding: 30px;
+        h1{
+            text-align: left;
+        }
+    }
+}
+// end about
 }
 //media query desktop
 @media only screen and (min-width: 900px) {
@@ -420,6 +673,14 @@ img{
                 a {
                     font-size: 1.8rem;
                 }
+            }
+        }
+    }
+    #services{
+        .service-bottom {
+            .service-item-webdesign, .service-item-illustrations{
+                flex-basis: 22%;
+                margin: 1.5%;
             }
         }
     }
