@@ -1,0 +1,31 @@
+// tablet veiw
+@media only screen and (min-width: 600px){
+    #hero{
+        h1{
+            font-size: 7rem;
+        }
+    }
+}
+// desktop veiw
+@media only screen and (min-width: 900px){
+    #header{
+        .hamburger{
+            display: none;
+        }
+        .nav-list {
+            ul{
+                position: initial;
+                display: block;
+                height: auto;
+                width: fit-content;
+                background-color: transparent;
+                a:after{
+                    display: none;
+                }
+                li{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+<!-- created by Keith Lopez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Keithlpz4</title>
+</head>
+<body>
+    <section id="header">
+        <div class="header container">
+            <nav class="nav-bar">
+                <div class="brand">
+                    <a href="#hero"><h1>Keith Lopez</h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#aboutme">About me</a></li>
+                        <!-- <li><a href="#contact">Contact</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>Illustrator<span></span></h1>
+                <h1>Graphic Artist<span></span></h1>
+                <h1>UX/Web Designer.<span></span></h1>
+            </div>
+        </div>
+    </section>
+    <section id="aboutme">
+        <div class="aboutme container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="assests/imgs/cartoon_portrait.png" alt=self-caricature>
+                </div>
+            </div>
+            <div class="col-right">
+                <h2 class="section-title">About Me</h2>
+                <h2>My name is Keith Lopez</h2>
+                <p>I am a Graphic Artist and UX/Web designer.</p>
+                <a href=# class="cta">Download Resume</a>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="portfolio container">
+            <h2 class="section-title">Portfolio</h2>
+            <ul class="portfolio-filter">
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="webdesign">Web Design</li>
+                <li class="list" data-filter="illustration">Illustration</li>
+            </ul>
+            <div class="portfolio-gallery container">
+                <div class="itemBox illustration"><img src="assests/imgs/griffinsfirstday-cover.jpg" alt="Griffins First Day - Hand Drawn"/></div>
+                <div class="itemBox webdesign"><img src="assests/imgs/native-lang-redesign.jpeg" alt="Website Redesign Project - HTML, CSS, SASS"></div>
+                <div class="itemBox illustration"><img src="assests/imgs/USAstamp.png" alt="USA Eagle Stamp - Adobe Illustrator"/></div>
+                <div class="itemBox webdesign"><img src="assests/imgs/Home.png" alt="UX Mobile Application design project - Adobe UX"></div>
+                <div class="itemBox illustration"><img src="assests/imgs/magazine_Page_1.jpg" alt="Empty Pokeckts, Full Soul Magazine Spread - Adobe InDesign"/></div>
+                <!-- <div class="itemBox webdesign"><img src=""></div> -->
+            </div>
+        </div>
+    </section>
+    <!-- modals -->
+    <div class="modal">
+        <span class="modal-close"><button class="icon modal-close"><i class="fa fa-close"></i></button></span>
+        <div class="modal-content">
+            <img src="" class="modal-img" />
+            <span class="modal-text"></span>
+        </div>
+    </div>
+    <!-- <section id="aboutme">
+        <div class="aboutme container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="assests/imgs/cartoon_portrait.png" alt=self-caricature>
+                </div>
+            </div>
+            <div class="col-right">
+                <h2 class="section-title">About Me</h2>
+                <h2>My name is Keith Lopez</h2>
+                <p>I am a Graphic Artist and UX/Web designer.</p>
+                <a href=# class="cta">Download Resume</a>
+            </div>
+        </div>
+    </section> -->
+    <!-- contact section -->
+    <!-- <section id="contact">
+        <div class="contact">
+            <h2 class="section-title">Contact Info</h2>
+        </div>
+    </section> -->
+    <section id="footer">
+        <div class="footer container">
+            <ul class="social">
+                <li><a href="https://www.linkedin.com/in/keith-lopez-a860639/"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="https://www.deviantart.com/chezpizza"><i class="fa fa-deviantart"></i></a></li>
+            </ul>
+            <p>&copy;2021 Keith Lopez</p>
+        </div>
+    </section>
+    <script src="js/hamburger.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/data-filter.js"></script>
+    <!-- <script src="js/modal.js"></script> -->
+    <script src="js/img-modal.js"></script>
+</body>
+</html>
