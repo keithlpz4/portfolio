@@ -31,6 +31,7 @@ img {
 }
 
 .container {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -371,7 +372,6 @@ img {
   height: 100%;
   width: 100%;
   position: relative;
-  border: 10px solid white;
 }
 
 #aboutme .col-right {
@@ -453,6 +453,77 @@ img {
 
 #contact .contact {
   padding: 100px 0;
+}
+
+#articles .articles {
+  width: 100%;
+  flex-direction: column;
+  padding: 100px 10px;
+}
+
+#articles .articles .article-gallery {
+  width: 100%;
+  padding: 10px;
+}
+
+#articles .articles .article-gallery .article-img {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  padding: 10px;
+  flex-basis: 50%;
+}
+
+#articles .articles .article-gallery .article-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#articles .articles .article-gallery .iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  /* 16:9 ratio*/
+  position: relative;
+}
+
+#articles .articles .article-gallery .iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: solid 2px black;
+}
+
+#articles .articles .article-description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 80px;
+  border: solid 1px black;
+}
+
+#articles .articles .article-description .iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  /* 16:9 ratio*/
+  height: 100%;
+  position: relative;
+}
+
+#articles .articles .article-description .iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: solid 2px black;
 }
 
 #footer {

@@ -31,6 +31,7 @@ img{
     object-fit: cover;
 }
 .container{
+    position: relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -349,8 +350,14 @@ img{
             height: 100%;
             width: 100%;
             position: relative;
-            border: 10px solid white;
+            // border: 10px solid white;
         }
+        // .imgContainer{
+        //     display: inline-flex;
+        //     width: 100%;
+        //     flex-wrap: wrap;
+        //     overflow: auto;
+        // }
         // .about-img::after{
         //     content: '';
         //     position: absolute;
@@ -505,6 +512,78 @@ img{
         padding: 100px 0;
     }
 }
+// articles
+#articles{
+    .articles{
+        width: 100%;
+        flex-direction: column;
+        padding: 100px 10px;
+        .article-gallery{
+            // display: flex;
+            width: 100%;
+            padding: 10px;
+            .article-img{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                padding: 10px;
+                flex-basis: 50%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .iframe-container{
+                overflow: hidden;
+                padding-top: 56.25%; /* 16:9 ratio*/
+                position: relative;
+                iframe{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    border: solid 2px black;
+                }
+            }
+        }
+        .article-description{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            padding-bottom: 80px;
+            border:solid 1px black;
+            .iframe-container{
+                overflow: hidden;
+                // margin: 0;
+                // width: 750px;
+                // height: 1500px;
+                // padding: 0;
+                padding-top: 56.25%; /* 16:9 ratio*/
+                height: 100%;
+                position: relative;
+                iframe{
+                    // width: 1000px;
+                    // height: 9000px;
+                    // border: 0px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    border: solid 2px black;
+                }
+            }
+        }
+    }
+}
+// end articles
 //end contact form
 // end about section
 #footer{
@@ -642,6 +721,16 @@ img{
         }
     }
     // end about
+    // articles
+    // #articles{
+    //     .articles{
+            
+    //         .article-gallery{
+    //             // display: flex;
+    //             max-width: 150px;
+    //             .article-img{
+    //             }
+    // end articles
 }
 // desktop veiw
 @media only screen and (min-width: 900px){

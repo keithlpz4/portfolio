@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+    header, nav, .container, footer{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    footer ul{
+        flex-wrap: wrap;
+        li{
+            width: 100%;
+            border: none;
+        }
+    }
+    //breakpoint
+    section, article, aside{
+        float: none;
+        width: 100%;
+    }
+}
