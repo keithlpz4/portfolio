@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" type="image/svg" href="assests/imgs/logo/favicon2.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>About Me</title>
+    </head>
+<body>
+    <section id="header">
+        <div class="header container">
+            <nav class="nav-bar">
+                <div class="brand">
+                    <a href="index.html"><h1>Keith Lopez</h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="aboutme.html">About me</a></li>
+                        <!-- <li><a href="#contact">Contact</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section id="aboutme">
+        <div class="aboutme container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="assests/imgs/cartoon_portrait.png" alt=self-caricature>
+                </div>
+            </div>
+            <div class="col-right">
+                <h2 class="section-title">About Me</h2>
+                <h3>My name is Keith Lopez</h3>
+                <p> I’m a designer in the Baltimore/ Washington DC area. I am a requirements-driven, user-centric web designer.</p> 
+                <h3>What does this mean exactly? </h3>
+                <p>My years as an Information Systems Professional has allowed me to focus on the key components to ensure the success of each project and help identify problems that users may encounter. This process involved collaborating with various stakeholders on the goals of the project, designing user and process workflows, and project monitoring for continual improvements.</p>
+                <h3>Why switch to design?</h3>
+                <p>Perhaps the biggest frustration among users with IT systems has been when it looks cool it doesn’t work or if it works it was not well designed.  As a creative at heart, I decided to marry my IT knowledge and experience to help better design user-centric systems that meet the system’s functional requirements.</p>
+                <p>P.S. 
+                    I’m also a cartoonist with a published children’s book: Griffin’s First Day of School. It is available online on <a href="https://www.amazon.com/Griffins-First-School-Jason-Ruby/dp/1953818501">Amazon</a>, <a href="https://www.target.com/p/griffin-s-first-day-of-school-by-jason-ruby-paperback/-/A-83346291?ref=tgt_adv_XS000000&AFID=bing_pla_df&fndsrc=tgtao&DFA=71700000012790841&CPNG=PLA_Entertainment%2BShopping%7CEntertainment_Ecomm_Hardlines&adgroup=SC_Entertainment&LID=700000001230728&LNM=PRODUCT_GROUP&network=o&device=c&location=&targetid=pla-1103400009861:aud-805670406&gclid=6c9bab82a39c14d8d4efcaf4470e799d&gclsrc=3p.ds&ds_rl=1246978&ds_rl=1248099&ref=tgt_adv_XS000000&AFID=bing_pla_df&CPNG=PLA_Entertainment%2BShopping%7CEntertainment_Ecomm_Hardlines&adgroup=SC_Entertainment&LID=700000001230728pbs&network=s&device=c&querystring=griffins%20first%20day&msclkid=6c9bab82a39c14d8d4efcaf4470e799d">Target</a> or other online retail bookstores.
+                    </p>
+                <a href="assests/pdf/KAlopez_resume_2021.pdf" target="_blank" class="cta">View My Resume</a>
+            </div>
+        </div>
+    </section>
+    <section id="contactform">
+        <div class="contactform container">
+            <h2 class="section-title">Contact Me</h2>
+            <form action="mailto:keithlpz4@gmail.com" method="post" enctype="text/plain">
+                <!-- contact name  -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name..">
+                <!-- email address -->
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required placeholder="Your email address..">
+                <!-- subject -->
+                <label for="emailadd">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="Please write a subject line..">
+                <!-- comments -->
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                <!-- <input type="hidden" name="_next" value="Thank you"> -->
+            </form>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer container">
+            <ul class="social">
+                <li><a href="https://www.linkedin.com/in/keith-lopez-a860639/"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="https://www.deviantart.com/chezpizza"><i class="fa fa-deviantart"></i></a></li>
+                <li><a href="https://www.artstation.com/keithlpz4"><i class="fab fa-artstation"></i></a></li>
+            </ul>
+            <p>&copy;2021 Keith Lopez</p>
+        </div>
+    </section>
+    <script src="js/hamburger.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2db7a48b3a.js" crossorigin="anonymous"></script>
+    <script src="js/data-filter.js"></script>
+    <!-- <script src="js/modal.js"></script> -->
+    <script src="js/img-modal.js"></script>
+</body>
+</html>
