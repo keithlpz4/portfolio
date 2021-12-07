@@ -384,6 +384,10 @@ img {
   color: white;
 }
 
+#aboutme {
+  padding-top: 20px;
+}
+
 #aboutme .aboutme {
   flex-direction: column-reverse;
   text-align: center;
@@ -485,6 +489,7 @@ img {
 }
 
 #articles {
+  width: 100%;
   padding: 20px;
 }
 
@@ -492,14 +497,16 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
 
 #articles .articles .article-gallery {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-content: center;
+  text-align: center;
   padding: 10px;
+  border: red 1px solid;
 }
 
 #articles .articles .article-gallery .article-img {
@@ -524,12 +531,57 @@ img {
   transform: scale(0.9);
 }
 
+#articles .articles .article-gallery .description {
+  text-align: center;
+  width: 100%;
+}
+
+#articles .articles .article-gallery .description ul {
+  margin-bottom: 10px;
+}
+
+#articles .articles .article-gallery .description ul li {
+  font-size: 14px;
+  display: inline-flex;
+}
+
+#articles .articles .article-gallery .description ul li + li:before {
+  color: black;
+  content: "/\00a0";
+}
+
+#articles .articles .article-gallery .description .gallery-title {
+  font-size: 1.5rem;
+}
+
 #articles .articles .article-description {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 20px;
-  padding-bottom: 80px;
+}
+
+#articles .articles .article-description .description {
+  text-align: center;
+}
+
+#articles .articles .article-description .description ul {
+  margin-bottom: 10px;
+}
+
+#articles .articles .article-description .description ul li {
+  font-size: 14px;
+  display: inline-flex;
+}
+
+#articles .articles .article-description .description ul li + li:before {
+  color: black;
+  content: "/\00a0";
+}
+
+#articles .articles .article-description .description h2 {
+  display: inline;
+  padding-bottom: 20px;
 }
 
 #articles .articles h2, #articles .articles h3 {

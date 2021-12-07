@@ -90,6 +90,7 @@ img{
     }
 }
 // body
+
 #header{
     position: fixed;
     z-index: 1000;
@@ -392,6 +393,7 @@ img{
 }
 // about section
 #aboutme{
+    padding-top: 20px;
     .aboutme{
         flex-direction: column-reverse;//column-reverse
         text-align: center;
@@ -571,19 +573,23 @@ img{
 }
 // articles
 #articles{
+    width: 100%;
     padding: 20px;
     .articles{
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        // padding: 10px;
         // border: solid 1px black;
         .article-gallery{
             display: flex;
             flex-wrap: wrap;
+            flex-direction: column;
             align-content: center;
+            text-align: center;
             // width: 100%;
             padding: 10px;
+            border: red 1px solid;
             .article-img{
                 margin: 0 auto;
                 text-align: center;
@@ -603,6 +609,31 @@ img{
                 }
                 }
             }
+            .description{
+                text-align: center;
+                width: 100%;
+                ul{
+                    margin-bottom: 10px;
+                    li{
+                        font-size: 14px;
+                        display: inline-flex;
+                        & + li:before{
+                            color: black;
+                            content: "/\00a0";
+                        }
+                    }
+                }
+                .gallery-title{
+                    font-size: 1.5rem;
+                }
+            }
+            // .iframe-container{
+            //     width: 100%;
+            //     overflow: hidden;
+            //     position: relative;
+            //     // padding: 10px;
+            //     border: green 1px solid;
+            // }
             // .iframe-container{
                 // overflow: hidden;
                 // padding-top: 56.25%; /* 16:9 ratio*/
@@ -625,7 +656,26 @@ img{
             flex-direction: column;
             width: 100%;
             padding: 20px;
-            padding-bottom: 80px;
+            // padding-bottom: 80px;
+            // border: solid 1px green;
+            .description{
+                text-align: center;
+                ul{
+                    margin-bottom: 10px;
+                    li{
+                        font-size: 14px;
+                        display: inline-flex;
+                        & + li:before{
+                            color: black;
+                            content: "/\00a0";
+                        }
+                    }
+                }
+                h2{
+                display: inline;
+                padding-bottom: 20px;
+                }
+            }
             // border:solid 1px black;
             
             // ol{
@@ -656,7 +706,7 @@ img{
             //         height: 100%;
             //         width: 100%;
             //         border: solid 2px black;
-            //     }
+                // }
             // }
         }
         h2, h3{
@@ -722,6 +772,7 @@ img{
 //end contact form
 // end about section
 #footer{
+    // width: 100vw;
     background-color: $nav-colors;
     .footer{
         @include mobile-container;
