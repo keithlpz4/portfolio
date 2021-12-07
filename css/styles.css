@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Permanent+Marker&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -46,14 +45,14 @@ img {
   color: white;
 }
 
-.brand span {
+.brand h1:hover {
   color: crimson;
 }
 
 .cta {
   display: inline-block;
   padding: 10px 30px;
-  color: white;
+  color: inherit;
   background-color: transparent;
   border: 2px solid crimson;
   font-size: 2rem;
@@ -252,6 +251,11 @@ img {
   justify-content: flex-start;
 }
 
+#hero #artist {
+  font-family: permanent marker, cursive;
+  font-size: 5rem;
+}
+
 #hero h1 {
   display: block;
   width: fit-content;
@@ -304,7 +308,7 @@ img {
 
 #portfolio .portfolio {
   justify-content: center;
-  padding: 50px 0;
+  padding: 100px 0;
   flex-direction: column;
 }
 
@@ -347,12 +351,37 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  cursor: pointer;
-  transition: 0.3s all ease;
 }
 
-#portfolio .portfolio-gallery .itemBox img:hover {
-  transform: scale(0.9);
+#portfolio .portfolio-gallery .itemBox .overlay {
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #29323c;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
+}
+
+#portfolio .portfolio-gallery .itemBox:hover .overlay {
+  transform: scale(1);
+}
+
+#portfolio .portfolio-gallery .itemBox .text {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#portfolio .portfolio-gallery .itemBox .text a {
+  color: white;
 }
 
 #aboutme .aboutme {
@@ -455,47 +484,44 @@ img {
   padding: 100px 0;
 }
 
+#articles {
+  padding: 20px;
+}
+
 #articles .articles {
   width: 100%;
+  display: flex;
   flex-direction: column;
-  padding: 100px 10px;
+  padding: 10px;
 }
 
 #articles .articles .article-gallery {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   padding: 10px;
 }
 
 #articles .articles .article-gallery .article-img {
+  margin: 0 auto;
+  text-align: center;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 10px;
   padding: 10px;
-  flex-basis: 50%;
+  flex-basis: 75%;
 }
 
 #articles .articles .article-gallery .article-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s all ease;
 }
 
-#articles .articles .article-gallery .iframe-container {
-  overflow: hidden;
-  padding-top: 56.25%;
-  /* 16:9 ratio*/
-  position: relative;
-}
-
-#articles .articles .article-gallery .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  border: solid 2px black;
+#articles .articles .article-gallery .article-img img:hover {
+  transform: scale(0.9);
 }
 
 #articles .articles .article-description {
@@ -506,23 +532,60 @@ img {
   padding-bottom: 80px;
 }
 
-#articles .articles .article-description .iframe-container {
-  overflow: hidden;
-  padding-top: 56.25%;
-  /* 16:9 ratio*/
-  height: 100%;
-  position: relative;
+#articles .articles h2, #articles .articles h3 {
+  align-self: center;
+  margin-bottom: 10px;
 }
 
-#articles .articles .article-description .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
+#articles .articles h3 {
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+#articles .articles .cta {
+  padding: 10px 10px;
+  font-size: 1rem;
+  letter-spacing: .1rem;
+}
+
+#contactform .contactform {
   width: 100%;
-  border: solid 2px black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-size: 1.4rem;
+}
+
+#contactform input[type=text], #contactform input[type=email], #contactform textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+#contactform input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contactform input[type=submit]:hover {
+  background-color: lightgreen;
+}
+
+#contactform input[type=reset] {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
 }
 
 #footer {
@@ -565,6 +628,14 @@ img {
   color: limegreen;
 }
 
+#footer .social li a .fa-artstation:hover {
+  color: #008dda;
+}
+
+#footer .social li a .fa-behance:hover {
+  color: #008dda;
+}
+
 #footer h2 {
   color: white;
   font-weight: 500;
@@ -577,6 +648,15 @@ img {
 #footer p {
   color: white;
   font-size: 1.3rem;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 @keyframes hamburger_pulse {
@@ -636,6 +716,9 @@ img {
   .cta {
     font-size: 2.5rem;
     padding: 20px 60px;
+  }
+  #hero #artist {
+    font-size: 10rem;
   }
   #hero h1 {
     font-size: 7rem;

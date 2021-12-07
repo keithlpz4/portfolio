@@ -1,9 +1,10 @@
 // variables
-$nav-colors: #29323c;
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-$google-ramp-font:'Rampart One';
+$nav-colors: #29323c;//
+$cta-colors: crimson;// call to action colors
+$cta-fontcolors:white;//call to action font colors
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Permanent+Marker&display=swap');
 $google-bebas-font:'Bebas Neue';
+$google-permanent-marker: permanent marker, cursive;
 // globals
 *{
     margin: 0;
@@ -37,22 +38,28 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+    // border: solid 1px green;
 }
 .brand{
     h1{
         font-family: $google-bebas-font;
+        // font-family: $google-permanent-marker;
         font-size: 5rem;
         text-transform: uppercase;
         color: white;
+        &:hover{
+            color: crimson;
+            // animation: glow 1s ease-in-out infinite alternate;
+        }
     }
-    span{
-        color: crimson;
-    }
+    // span{
+    //     color: crimson;
+    // }
 }
 .cta{
     display: inline-block;
     padding: 10px 30px;
-    color: white;
+    color: inherit;
     background-color: transparent;
     border: 2px solid crimson;
     font-size: 2rem;
@@ -238,6 +245,10 @@ img{
         padding: 0 50px;
         justify-content: flex-start;
     }
+    #artist{
+        font-family: permanent marker, cursive;
+        font-size: 5rem;
+    }
     h1{
         display: block;
         width: fit-content;
@@ -281,7 +292,7 @@ img{
     width: 100%;
     .portfolio{
         justify-content: center;
-        padding: 50px 0;
+        padding: 100px 0;
         @include mobile-container;
         .portfolio-filter{
             display: flex;
@@ -324,12 +335,58 @@ img{
                 height: 100%;
                 object-fit: contain;
                 // border: 1px solid black;
-                cursor: pointer;
-                transition: 0.3s all ease;
-                &:hover{
-                    transform: scale(0.9);
-                }
+                // cursor: pointer;
+                // transition: 0.3s all ease;
+                // &:hover{
+                //     transform: scale(0.9);
+                // }
             }
+            .overlay{
+                position: absolute;
+                cursor: pointer;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: $nav-colors;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                transform: scale(0);
+                -webkit-transition: .3s ease;
+                transition: .3s ease;
+                // position: absolute;
+                // background: rgb(0,0,0);
+                // background: rgba(0,0,0,0.5);
+                // color: #f1f1f1;
+                // width: 100%;
+                // transition: .5 ease;
+                // opacity: 0;
+                // color: white;
+                // font-size: 20px;
+                // padding: 20px;
+                // text-align: center;
+            }
+            &:hover .overlay{
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+                // opacity: .9;
+            }
+            .text {
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+                a{
+                    color: white;
+                }
+              }
         }
     }
 }
@@ -514,41 +571,54 @@ img{
 }
 // articles
 #articles{
+    padding: 20px;
     .articles{
         width: 100%;
+        display: flex;
         flex-direction: column;
-        padding: 100px 10px;
+        padding: 10px;
+        // border: solid 1px black;
         .article-gallery{
-            // display: flex;
-            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            // width: 100%;
             padding: 10px;
             .article-img{
+                margin: 0 auto;
+                text-align: center;
                 display: grid;
                 grid-template-columns: auto auto auto;
                 gap: 10px;
                 padding: 10px;
-                flex-basis: 50%;
+                flex-basis: 75%;
                 img{
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
+                    cursor: pointer;
+                    transition: 0.3s all ease;
+                &:hover{
+                    transform: scale(0.9);
+                }
                 }
             }
-            .iframe-container{
-                overflow: hidden;
-                padding-top: 56.25%; /* 16:9 ratio*/
-                position: relative;
-                iframe{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    height: 100%;
-                    width: 100%;
-                    border: solid 2px black;
-                }
-            }
+            // .iframe-container{
+                // overflow: hidden;
+                // padding-top: 56.25%; /* 16:9 ratio*/
+                // position: relative;
+                // iframe{
+                    // align-self: center;
+            //         position: absolute;
+            //         top: 0;
+            //         left: 0;
+            //         bottom: 0;
+            //         right: 0;
+            //         height: 100%;
+            //         width: 100%;
+            //         border: solid 2px black;
+                // }
+            // }
         }
         .article-description{
             display: flex;
@@ -557,31 +627,96 @@ img{
             padding: 20px;
             padding-bottom: 80px;
             // border:solid 1px black;
-            .iframe-container{
-                overflow: hidden;
-                // margin: 0;
-                // width: 750px;
-                // height: 1500px;
-                // padding: 0;
-                padding-top: 56.25%; /* 16:9 ratio*/
-                height: 100%;
-                position: relative;
-                iframe{
-                    // width: 1000px;
-                    // height: 9000px;
-                    // border: 0px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    height: 100%;
-                    width: 100%;
-                    border: solid 2px black;
-                }
-            }
+            
+            // ol{
+            //     padding: 10px;
+            //     li{
+            //         font-family: Arial, Helvetica, sans-serif;
+            //         font-size: 10px;
+            //     }
+            // }
+            // .iframe-container{
+            //     overflow: hidden;
+            //     // margin: 0;
+            //     // width: 750px;
+            //     // height: 1500px;
+            //     // padding: 0;
+            //     padding-top: 56.25%; /* 16:9 ratio*/
+            //     height: 100%;
+            //     position: relative;
+            //     iframe{
+            //         // width: 1000px;
+            //         // height: 9000px;
+            //         // border: 0px;
+            //         position: absolute;
+            //         top: 0;
+            //         left: 0;
+            //         bottom: 0;
+            //         right: 0;
+            //         height: 100%;
+            //         width: 100%;
+            //         border: solid 2px black;
+            //     }
+            // }
+        }
+        h2, h3{
+            align-self: center;
+            margin-bottom: 10px;
+        }
+        h3{
+            padding: 20px;
+            text-transform: uppercase;
+        }
+        .cta{
+            padding: 10px 10px;
+            font-size: 1rem;
+            letter-spacing: .1rem;
         }
     }
+}
+#contactform{
+    .contactform{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // padding: 10px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        font-size: 1.4rem;
+    }
+    input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    } 
+    input[type=submit]:hover {
+        background-color: lightgreen;
+    }
+    input[type=reset] {
+        // background-color: crimson;
+        // color: white;
+        padding: 12px 20px;
+        border: none;
+        // border-radius: 4px;
+        cursor: pointer;
+    } 
+    // input[type=reset]:hover {
+    //     background-color: pink;
+    // }
 }
 // end articles
 //end contact form
@@ -614,6 +749,12 @@ img{
                 .fa-deviantart:hover{
                     color: limegreen;
                 }
+                .fa-artstation:hover{
+                    color: #008dda;
+                }
+                .fa-behance:hover{
+                    color: #008dda;
+                }
             }
             
             
@@ -634,6 +775,14 @@ img{
     
 }
 //animation frames
+@keyframes glow{
+    from{
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+  to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
 @keyframes hamburger_pulse {
     0% {
       opacity: 1;
@@ -683,6 +832,7 @@ img{
         opacity: 1;
     }
 }
+
 //end animation frames
 // tablet veiw
 @media only screen and (min-width: 600px){
@@ -691,6 +841,9 @@ img{
         padding: 20px 60px;
     }
     #hero{
+        #artist{
+            font-size: 10rem;
+        }
         h1{
             font-size: 7rem;
         }

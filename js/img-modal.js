@@ -1,4 +1,5 @@
-const images = document.querySelectorAll(".itemBox img");
+// const images = document.querySelectorAll(".itemBox img"); //for homepage
+const images = document.querySelectorAll(".viewable");
 const modal = document.querySelector(".modal");
 const modalImg = document.querySelector(".modal-img");
 const modalTxt =document.querySelector(".modal-text");
