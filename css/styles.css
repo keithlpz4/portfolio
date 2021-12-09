@@ -583,12 +583,13 @@ img {
   padding-bottom: 20px;
 }
 
-#articles .articles h2, #articles .articles h3 {
+#articles .articles h2 {
   align-self: center;
   margin-bottom: 10px;
 }
 
 #articles .articles h3 {
+  align-self: center;
   padding: 20px;
   text-transform: uppercase;
 }
